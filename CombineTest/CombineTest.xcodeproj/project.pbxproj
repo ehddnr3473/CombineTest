@@ -109,10 +109,8 @@
 			children = (
 				6BAC42252924D27B00A58F0E /* Delegate */,
 				6BAC42242924D26600A58F0E /* TabBar */,
-				6BAC42262924D32D00A58F0E /* ViewController.swift */,
-				6BAC42202924D04500A58F0E /* Model.swift */,
-				6BAC421E2924D03B00A58F0E /* ViewModel.swift */,
-				6BAC41EF2924CD9D00A58F0E /* PlayViewController.swift */,
+				6BE51B6F2924F69F003E5753 /* MVVM&Combine */,
+				6BE51B6E2924F687003E5753 /* PlayGround */,
 				6BAC41F42924CD9E00A58F0E /* Assets.xcassets */,
 				6BAC41F62924CD9E00A58F0E /* LaunchScreen.storyboard */,
 				6BAC41F92924CD9E00A58F0E /* Info.plist */,
@@ -152,6 +150,24 @@
 				6BAC41ED2924CD9D00A58F0E /* SceneDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		6BE51B6E2924F687003E5753 /* PlayGround */ = {
+			isa = PBXGroup;
+			children = (
+				6BAC41EF2924CD9D00A58F0E /* PlayViewController.swift */,
+			);
+			path = PlayGround;
+			sourceTree = "<group>";
+		};
+		6BE51B6F2924F69F003E5753 /* MVVM&Combine */ = {
+			isa = PBXGroup;
+			children = (
+				6BAC42202924D04500A58F0E /* Model.swift */,
+				6BAC421E2924D03B00A58F0E /* ViewModel.swift */,
+				6BAC42262924D32D00A58F0E /* ViewController.swift */,
+			);
+			path = "MVVM&Combine";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

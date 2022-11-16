@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 import Combine
 
+/// Combine 프레임워크를 이용하여 다양한 코드를 실습해보는 Playground ViewController
 final class PlayViewController: UIViewController {
     
     private var titleLabel: UILabel = {
@@ -57,8 +58,8 @@ final class PlayViewController: UIViewController {
     private var textLabel: UILabel = {
         let label = UILabel()
         
-        label.font = .boldSystemFont(ofSize: 30)
-        label.text = "Label"
+        label.font = .boldSystemFont(ofSize: 20)
+        label.text = "Press button to Publish."
         
         return label
     }()
@@ -73,13 +74,13 @@ final class PlayViewController: UIViewController {
         return stackView
     }()
     
-    private lazy var firstButton: UIButton = {
+    private lazy var justButton: UIButton = {
         let button = UIButton(type: .system)
         
         button.setTitle("First", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .blue
-        button.addTarget(self, action: #selector(touchUpFirstButton(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(touchUpJustButton(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -106,13 +107,16 @@ final class PlayViewController: UIViewController {
         setUpHierachy()
         setUpLayout()
     }
-    
+}
+
+// MARK: - Layout
+extension PlayViewController {
     private func setUpHierachy() {
         [publishTextField, publishButton].forEach {
             publishStackView.addArrangedSubview($0)
         }
         
-        [firstButton, secondButton].forEach {
+        [justButton, secondButton].forEach {
             buttonStackView.addArrangedSubview($0)
         }
         
@@ -144,13 +148,26 @@ final class PlayViewController: UIViewController {
             stackView.width.equalToSuperview().multipliedBy(0.4)
         }
     }
-    
+}
+
+// MARK: - Button
+extension PlayViewController {
     @IBAction func touchUpPublishButton(_ sender: UIButton) {
         
     }
     
-    @IBAction func touchUpFirstButton(_ sender: UIButton) {
-        
+    // Convinience Publisher "Just"를 사용해서 Publish
+    // publish한 값을 textLabel에 적용
+    @IBAction func touchUpJustButton(_ sender: UIButton) {
+        let publisher = Just("Hello")
+        // subscriber
+        let _ = publisher
+            .sink(receiveCompletion: { completion in
+                print("Publishing was \(completion)")
+            }) { [weak self] value in
+                print(value)
+                self?.textLabel.text = value
+            }
     }
     
     @IBAction func touchUpSecondButton(_ sender: UIButton) {
