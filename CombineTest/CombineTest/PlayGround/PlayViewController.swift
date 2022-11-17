@@ -12,6 +12,9 @@ import Combine
 /// Combine 프레임워크를 이용하여 다양한 코드를 실습해보는 Playground ViewController
 final class PlayViewController: UIViewController {
     
+    // MARK: - Properties
+    private var practice = Practice()
+    
     private var titleLabel: UILabel = {
         let label = UILabel()
         
@@ -77,21 +80,21 @@ final class PlayViewController: UIViewController {
     private lazy var justButton: UIButton = {
         let button = UIButton(type: .system)
         
-        button.setTitle("First", for: .normal)
+        button.setTitle("Just&Sink", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .blue
-        button.addTarget(self, action: #selector(touchUpJustButton(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(touchUpJustSinkButton(_:)), for: .touchUpInside)
         
         return button
     }()
     
-    private lazy var secondButton: UIButton = {
+    private lazy var assignButton: UIButton = {
         let button = UIButton(type: .system)
         
-        button.setTitle("Second", for: .normal)
+        button.setTitle("Assign", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .blue
-        button.addTarget(self, action: #selector(touchUpSecondButton(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(touchUpAssignButton(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -116,7 +119,7 @@ extension PlayViewController {
             publishStackView.addArrangedSubview($0)
         }
         
-        [justButton, secondButton].forEach {
+        [justButton, assignButton].forEach {
             buttonStackView.addArrangedSubview($0)
         }
         
@@ -150,28 +153,21 @@ extension PlayViewController {
     }
 }
 
-// MARK: - Button
+// MARK: - Button Action
 extension PlayViewController {
     @IBAction func touchUpPublishButton(_ sender: UIButton) {
         
     }
     
-    // Convinience Publisher "Just"를 사용해서 Publish
-    // publish한 값을 textLabel에 적용
-    @IBAction func touchUpJustButton(_ sender: UIButton) {
-        let publisher = Just("Hello")
-        // subscriber
-        let _ = publisher
-            .sink(receiveCompletion: { completion in
-                print("Publishing was \(completion)")
-            }) { [weak self] value in
-                print(value)
-                self?.textLabel.text = value
-            }
+
+    @IBAction func touchUpJustSinkButton(_ sender: UIButton) {
+        practice.sink01 { [weak self] value in
+            self?.textLabel.text = value
+        }
     }
     
-    @IBAction func touchUpSecondButton(_ sender: UIButton) {
-        
+    @IBAction func touchUpAssignButton(_ sender: UIButton) {
+        practice.assign01()
     }
 }
 

@@ -32,7 +32,7 @@ class TabBarController: UITabBarController {
 }
 
 private struct NameConstants {
-    static let playTitle = "Practice"
+    static let playTitle = "Playground"
     static let viewTitle = "View"
     static let playIconName = "gamecontroller"
     static let viewIconName = "list.bullet.clipboard"
