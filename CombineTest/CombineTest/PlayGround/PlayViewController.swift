@@ -30,7 +30,7 @@ final class PlayViewController: UIViewController {
         let stackView = UIStackView()
         
         stackView.axis = .horizontal
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .fill
         stackView.spacing = LayoutConstants.standardOffset
         
         return stackView
@@ -54,6 +54,9 @@ final class PlayViewController: UIViewController {
         button.layer.cornerRadius = 5
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.black.cgColor
+        
+        // intrinsicSize에 패딩 값을 추가해줄것.
+//        button.titleEdgeInsets = .init(top: .zero, left: 3, bottom: .zero, right: 3)
         
         return button
     }()
@@ -99,10 +102,23 @@ final class PlayViewController: UIViewController {
         return button
     }()
     
+    private lazy var currentValueSubjectButton: UIButton = {
+        let button = UIButton(type: .system)
+        
+        button.setTitle("CurrentValueSubject", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .blue
+        button.addTarget(self, action: #selector(touchUpCurrentValueSubjectButton(_:)), for: .touchUpInside)
+        
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setUpUI()
+//        print(publishButton.intrinsicContentSize)
+//        print(publishButton.titleLabel?.intrinsicContentSize)
     }
     
     private func setUpUI() {
@@ -119,7 +135,7 @@ extension PlayViewController {
             publishStackView.addArrangedSubview($0)
         }
         
-        [justButton, assignButton].forEach {
+        [justButton, assignButton, currentValueSubjectButton].forEach {
             buttonStackView.addArrangedSubview($0)
         }
         
@@ -137,7 +153,7 @@ extension PlayViewController {
         publishStackView.snp.makeConstraints { stackView in
             stackView.centerX.equalToSuperview()
             stackView.top.equalTo(titleLabel.snp.bottom).offset(LayoutConstants.largeOffset)
-            stackView.width.equalToSuperview().multipliedBy(0.5)
+            stackView.width.equalToSuperview().multipliedBy(0.7)
         }
         
         textLabel.snp.makeConstraints { label in
@@ -168,6 +184,11 @@ extension PlayViewController {
     
     @IBAction func touchUpAssignButton(_ sender: UIButton) {
         practice.assign01()
+    }
+    
+    @IBAction func touchUpCurrentValueSubjectButton(_ sender: UIButton) {
+        let text = publishTextField.text ?? ""
+        practice.currentValueSubject01(initialValue: text)
     }
 }
 
