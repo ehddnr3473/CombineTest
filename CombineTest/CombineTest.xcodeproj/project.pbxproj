@@ -25,6 +25,7 @@
 		6BAC42272924D32D00A58F0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC42262924D32D00A58F0E /* ViewController.swift */; };
 		6BE085BE2927C6C3002BB5E9 /* CurrentValueSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE085BD2927C6C3002BB5E9 /* CurrentValueSubject.swift */; };
 		6BE085C029280AE4002BB5E9 /* PassthroughSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE085BF29280AE4002BB5E9 /* PassthroughSubject.swift */; };
+		6BEEDC1B29290F5900E3F4FD /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEEDC1A29290F5900E3F4FD /* ObservableObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		6BAC42262924D32D00A58F0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6BE085BD2927C6C3002BB5E9 /* CurrentValueSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentValueSubject.swift; sourceTree = "<group>"; };
 		6BE085BF29280AE4002BB5E9 /* PassthroughSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassthroughSubject.swift; sourceTree = "<group>"; };
+		6BEEDC1A29290F5900E3F4FD /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +99,10 @@
 		6B5BAC892925F1B40020B1DC /* Practice Code */ = {
 			isa = PBXGroup;
 			children = (
+				6BEEDC1929290F3600E3F4FD /* Observable Objects */,
+				6BEEDC1829290F0400E3F4FD /* Subscriber */,
+				6BEEDC1729290EDE00E3F4FD /* Subject */,
 				6B5BAC872925EF4E0020B1DC /* Practice.swift */,
-				6B5BAC8C2925F4C70020B1DC /* Sink.swift */,
-				6B5BAC8E2925F4D10020B1DC /* Assign.swift */,
-				6BE085BD2927C6C3002BB5E9 /* CurrentValueSubject.swift */,
-				6BE085BF29280AE4002BB5E9 /* PassthroughSubject.swift */,
 			);
 			path = "Practice Code";
 			sourceTree = "<group>";
@@ -191,6 +192,32 @@
 				6BAC42262924D32D00A58F0E /* ViewController.swift */,
 			);
 			path = "MVVM&Combine";
+			sourceTree = "<group>";
+		};
+		6BEEDC1729290EDE00E3F4FD /* Subject */ = {
+			isa = PBXGroup;
+			children = (
+				6BE085BD2927C6C3002BB5E9 /* CurrentValueSubject.swift */,
+				6BE085BF29280AE4002BB5E9 /* PassthroughSubject.swift */,
+			);
+			path = Subject;
+			sourceTree = "<group>";
+		};
+		6BEEDC1829290F0400E3F4FD /* Subscriber */ = {
+			isa = PBXGroup;
+			children = (
+				6B5BAC8C2925F4C70020B1DC /* Sink.swift */,
+				6B5BAC8E2925F4D10020B1DC /* Assign.swift */,
+			);
+			path = Subscriber;
+			sourceTree = "<group>";
+		};
+		6BEEDC1929290F3600E3F4FD /* Observable Objects */ = {
+			isa = PBXGroup;
+			children = (
+				6BEEDC1A29290F5900E3F4FD /* ObservableObject.swift */,
+			);
+			path = "Observable Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +365,7 @@
 				6BAC41F02924CD9D00A58F0E /* PlayViewController.swift in Sources */,
 				6BAC41EC2924CD9D00A58F0E /* AppDelegate.swift in Sources */,
 				6BAC42272924D32D00A58F0E /* ViewController.swift in Sources */,
+				6BEEDC1B29290F5900E3F4FD /* ObservableObject.swift in Sources */,
 				6BAC42232924D24A00A58F0E /* TabBarController.swift in Sources */,
 				6BAC421F2924D03B00A58F0E /* ViewModel.swift in Sources */,
 				6BAC41EE2924CD9D00A58F0E /* SceneDelegate.swift in Sources */,

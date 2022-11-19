@@ -8,6 +8,4 @@
 import Foundation
 import Combine
 
-struct Practice {
-    
-}
+struct Practice { }

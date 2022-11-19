@@ -124,6 +124,17 @@ final class PlayViewController: UIViewController {
         return button
     }()
     
+    private lazy var observableObjectButton: UIButton = {
+        let button = UIButton(type: .system)
+        
+        button.setTitle("ObservableObject", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .blue
+        button.addTarget(self, action: #selector(touchUpObservableObjectButton(_:)), for: .touchUpInside)
+        
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -146,7 +157,7 @@ extension PlayViewController {
             publishStackView.addArrangedSubview($0)
         }
         
-        [justButton, assignButton, currentValueSubjectButton, passthroughSubjectButton].forEach {
+        [justButton, assignButton, currentValueSubjectButton, passthroughSubjectButton, observableObjectButton].forEach {
             buttonStackView.addArrangedSubview($0)
         }
         
@@ -204,6 +215,10 @@ extension PlayViewController {
     
     @IBAction func touchUpPassthroughSubjectButton(_ sender: UIButton) {
         practice.playPassthroughSubject()
+    }
+    
+    @IBAction func touchUpObservableObjectButton(_ sender: UIButton) {
+        practice.playObservableObject()
     }
 }
 
