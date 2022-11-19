@@ -113,6 +113,17 @@ final class PlayViewController: UIViewController {
         return button
     }()
     
+    private lazy var passthroughSubjectButton: UIButton = {
+        let button = UIButton(type: .system)
+        
+        button.setTitle("PassthroughSubject", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .blue
+        button.addTarget(self, action: #selector(touchUpPassthroughSubjectButton(_:)), for: .touchUpInside)
+        
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -135,7 +146,7 @@ extension PlayViewController {
             publishStackView.addArrangedSubview($0)
         }
         
-        [justButton, assignButton, currentValueSubjectButton].forEach {
+        [justButton, assignButton, currentValueSubjectButton, passthroughSubjectButton].forEach {
             buttonStackView.addArrangedSubview($0)
         }
         
@@ -177,18 +188,22 @@ extension PlayViewController {
     
 
     @IBAction func touchUpJustSinkButton(_ sender: UIButton) {
-        practice.sink01 { [weak self] value in
+        practice.playSink { [weak self] value in
             self?.textLabel.text = value
         }
     }
     
     @IBAction func touchUpAssignButton(_ sender: UIButton) {
-        practice.assign01()
+        practice.playAssign()
     }
     
     @IBAction func touchUpCurrentValueSubjectButton(_ sender: UIButton) {
         let text = publishTextField.text ?? ""
-        practice.currentValueSubject01(initialValue: text)
+        practice.playCurrentValueSubject(initialValue: text)
+    }
+    
+    @IBAction func touchUpPassthroughSubjectButton(_ sender: UIButton) {
+        practice.playPassthroughSubject()
     }
 }
 

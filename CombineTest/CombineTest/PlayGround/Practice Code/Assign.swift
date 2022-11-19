@@ -10,7 +10,7 @@ import Combine
 
 extension Practice {
     // assign()의 keyPath를 활용해서 객체의 프로퍼티에 접근하여 값 set
-    func assign01() {
+    func playAssign() {
         class MyClass {
             var didSetTexts = [String]()
             var anInt: Int = 0 {

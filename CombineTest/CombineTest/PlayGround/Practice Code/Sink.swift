@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 extension Practice {
-    func sink01(_ completion: @escaping (String) -> Void) {
+    func playSink(_ completion: @escaping (String) -> Void) {
         // Convinience Publisher "Just"를 사용해서 Publish
         // publish한 값을 textLabel에 적용
         let publisher = Just("Hello")
