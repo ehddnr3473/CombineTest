@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B3809F6292AE77100C2A4D1 /* Publish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3809F5292AE77100C2A4D1 /* Publish.swift */; };
 		6B5BAC882925EF4E0020B1DC /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5BAC872925EF4E0020B1DC /* Practice.swift */; };
 		6B5BAC8D2925F4C80020B1DC /* Sink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5BAC8C2925F4C70020B1DC /* Sink.swift */; };
 		6B5BAC8F2925F4D10020B1DC /* Assign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5BAC8E2925F4D10020B1DC /* Assign.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B3809F5292AE77100C2A4D1 /* Publish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publish.swift; sourceTree = "<group>"; };
 		6B5BAC872925EF4E0020B1DC /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		6B5BAC8C2925F4C70020B1DC /* Sink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sink.swift; sourceTree = "<group>"; };
 		6B5BAC8E2925F4D10020B1DC /* Assign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assign.swift; sourceTree = "<group>"; };
@@ -96,9 +98,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B3809F4292AE6C700C2A4D1 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				6B3809F5292AE77100C2A4D1 /* Publish.swift */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
 		6B5BAC892925F1B40020B1DC /* Practice Code */ = {
 			isa = PBXGroup;
 			children = (
+				6B3809F4292AE6C700C2A4D1 /* Publish */,
 				6BEEDC1929290F3600E3F4FD /* Observable Objects */,
 				6BEEDC1829290F0400E3F4FD /* Subscriber */,
 				6BEEDC1729290EDE00E3F4FD /* Subject */,
@@ -368,6 +379,7 @@
 				6BEEDC1B29290F5900E3F4FD /* ObservableObject.swift in Sources */,
 				6BAC42232924D24A00A58F0E /* TabBarController.swift in Sources */,
 				6BAC421F2924D03B00A58F0E /* ViewModel.swift in Sources */,
+				6B3809F6292AE77100C2A4D1 /* Publish.swift in Sources */,
 				6BAC41EE2924CD9D00A58F0E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

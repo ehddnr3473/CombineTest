@@ -41,6 +41,12 @@ final class PlayViewController: UIViewController {
         
         textField.layer.borderWidth = 2
         textField.layer.borderColor = UIColor.black.cgColor
+        textField.placeholder = "바꿀 ID를 입력하세요."
+        
+        let paddingView = UIView(frame: .init(x: .zero, y: .zero, width: 5, height: textField.frame.height))
+        
+        textField.leftView = paddingView
+        textField.leftViewMode = .always
         
         return textField
     }()
@@ -135,6 +141,28 @@ final class PlayViewController: UIViewController {
         return button
     }()
     
+    private lazy var intArrayPublishButton: UIButton = {
+        let button = UIButton(type: .system)
+        
+        button.setTitle("PublishAnIntArray", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .blue
+        button.addTarget(self, action: #selector(touchUpIntArrayPublishButton(_:)), for: .touchUpInside)
+        
+        return button
+    }()
+    
+    private lazy var notificationButton: UIButton = {
+        let button = UIButton(type: .system)
+        
+        button.setTitle("Notification", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .blue
+        button.addTarget(self, action: #selector(touchUpNotificationButton(_:)), for: .touchUpInside)
+        
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -157,7 +185,7 @@ extension PlayViewController {
             publishStackView.addArrangedSubview($0)
         }
         
-        [justButton, assignButton, currentValueSubjectButton, passthroughSubjectButton, observableObjectButton].forEach {
+        [justButton, assignButton, currentValueSubjectButton, passthroughSubjectButton, observableObjectButton, intArrayPublishButton, notificationButton].forEach {
             buttonStackView.addArrangedSubview($0)
         }
         
@@ -194,7 +222,7 @@ extension PlayViewController {
 // MARK: - Button Action
 extension PlayViewController {
     @IBAction func touchUpPublishButton(_ sender: UIButton) {
-        
+        practice.changeId(to: publishTextField.text ?? "")
     }
     
 
@@ -208,9 +236,9 @@ extension PlayViewController {
         practice.playAssign()
     }
     
+    // CurrentValueSubject: initial value 필요
     @IBAction func touchUpCurrentValueSubjectButton(_ sender: UIButton) {
-        let text = publishTextField.text ?? ""
-        practice.playCurrentValueSubject(initialValue: text)
+        practice.playCurrentValueSubject(initialValue: publishTextField.text ?? "")
     }
     
     @IBAction func touchUpPassthroughSubjectButton(_ sender: UIButton) {
@@ -219,6 +247,14 @@ extension PlayViewController {
     
     @IBAction func touchUpObservableObjectButton(_ sender: UIButton) {
         practice.playObservableObject()
+    }
+    
+    @IBAction func touchUpIntArrayPublishButton(_ sender: UIButton) {
+        practice.publishAnIntArary()
+    }
+    
+    @IBAction func touchUpNotificationButton(_ sender: UIButton) {
+        practice.publishWithNotificationCenter()
     }
 }
 
