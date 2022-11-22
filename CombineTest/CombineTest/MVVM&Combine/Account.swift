@@ -7,6 +7,8 @@
 
 import Foundation
 
-struct Model {
-    
+struct Account {
+    var id: String
+    var password: String
+    var name: String
 }

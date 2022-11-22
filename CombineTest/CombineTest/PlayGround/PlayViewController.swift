@@ -203,7 +203,7 @@ extension PlayViewController {
         publishStackView.snp.makeConstraints { stackView in
             stackView.centerX.equalToSuperview()
             stackView.top.equalTo(titleLabel.snp.bottom).offset(LayoutConstants.largeOffset)
-            stackView.width.equalToSuperview().multipliedBy(0.7)
+            stackView.width.equalToSuperview().multipliedBy(LayoutConstants.publishStackViewMultiplier)
         }
         
         textLabel.snp.makeConstraints { label in
@@ -214,7 +214,7 @@ extension PlayViewController {
         buttonStackView.snp.makeConstraints { stackView in
             stackView.top.equalTo(textLabel.snp.bottom).offset(LayoutConstants.standardOffset)
             stackView.centerX.equalToSuperview()
-            stackView.width.equalToSuperview().multipliedBy(0.4)
+            stackView.width.equalToSuperview().multipliedBy(LayoutConstants.buttonStackViewMultiplier)
         }
     }
 }
@@ -261,4 +261,6 @@ extension PlayViewController {
 private struct LayoutConstants {
     static let standardOffset: CGFloat = 12
     static let largeOffset: CGFloat = 30
+    static let publishStackViewMultiplier: CGFloat = 0.7
+    static let buttonStackViewMultiplier: CGFloat = 0.4
 }
