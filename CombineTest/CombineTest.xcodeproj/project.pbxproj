@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6B1607E2292C491A00264477 /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1607E1292C491A00264477 /* ModifyViewController.swift */; };
+		6B175123292C9C4A005B65F4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B175122292C9C4A005B65F4 /* Extensions.swift */; };
+		6B175125292CAD4B005B65F4 /* AccountVerify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B175124292CAD4B005B65F4 /* AccountVerify.swift */; };
 		6B3809F6292AE77100C2A4D1 /* Publish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3809F5292AE77100C2A4D1 /* Publish.swift */; };
 		6B5BAC882925EF4E0020B1DC /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5BAC872925EF4E0020B1DC /* Practice.swift */; };
 		6B5BAC8D2925F4C80020B1DC /* Sink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5BAC8C2925F4C70020B1DC /* Sink.swift */; };
@@ -21,7 +23,7 @@
 		6BAC420D2924CD9F00A58F0E /* CombineTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC420C2924CD9F00A58F0E /* CombineTestUITests.swift */; };
 		6BAC420F2924CD9F00A58F0E /* CombineTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC420E2924CD9F00A58F0E /* CombineTestUITestsLaunchTests.swift */; };
 		6BAC421D2924CF4E00A58F0E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6BAC421C2924CF4E00A58F0E /* SnapKit */; };
-		6BAC421F2924D03B00A58F0E /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC421E2924D03B00A58F0E /* AccountViewModel.swift */; };
+		6BAC421F2924D03B00A58F0E /* AccountInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC421E2924D03B00A58F0E /* AccountInformation.swift */; };
 		6BAC42212924D04500A58F0E /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC42202924D04500A58F0E /* Account.swift */; };
 		6BAC42232924D24A00A58F0E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC42222924D24A00A58F0E /* TabBarController.swift */; };
 		6BAC42272924D32D00A58F0E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC42262924D32D00A58F0E /* AccountViewController.swift */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		6B1607E1292C491A00264477 /* ModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyViewController.swift; sourceTree = "<group>"; };
+		6B175122292C9C4A005B65F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6B175124292CAD4B005B65F4 /* AccountVerify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVerify.swift; sourceTree = "<group>"; };
 		6B3809F5292AE77100C2A4D1 /* Publish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publish.swift; sourceTree = "<group>"; };
 		6B5BAC872925EF4E0020B1DC /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		6B5BAC8C2925F4C70020B1DC /* Sink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sink.swift; sourceTree = "<group>"; };
@@ -65,7 +69,7 @@
 		6BAC42082924CD9F00A58F0E /* CombineTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombineTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BAC420C2924CD9F00A58F0E /* CombineTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTestUITests.swift; sourceTree = "<group>"; };
 		6BAC420E2924CD9F00A58F0E /* CombineTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		6BAC421E2924D03B00A58F0E /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		6BAC421E2924D03B00A58F0E /* AccountInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInformation.swift; sourceTree = "<group>"; };
 		6BAC42202924D04500A58F0E /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		6BAC42222924D24A00A58F0E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6BAC42262924D32D00A58F0E /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B175126292CAD4E005B65F4 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				6BAC421E2924D03B00A58F0E /* AccountInformation.swift */,
+				6BAC42262924D32D00A58F0E /* AccountViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		6B175127292CAD68005B65F4 /* Modify */ = {
+			isa = PBXGroup;
+			children = (
+				6B1607E1292C491A00264477 /* ModifyViewController.swift */,
+				6B175124292CAD4B005B65F4 /* AccountVerify.swift */,
+			);
+			path = Modify;
+			sourceTree = "<group>";
+		};
+		6B175128292CAD83005B65F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6BAC42202924D04500A58F0E /* Account.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6B3809F4292AE6C700C2A4D1 /* Publish */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,10 +230,10 @@
 		6BE51B6F2924F69F003E5753 /* MVVM&Combine */ = {
 			isa = PBXGroup;
 			children = (
-				6BAC42202924D04500A58F0E /* Account.swift */,
-				6BAC421E2924D03B00A58F0E /* AccountViewModel.swift */,
-				6BAC42262924D32D00A58F0E /* AccountViewController.swift */,
-				6B1607E1292C491A00264477 /* ModifyViewController.swift */,
+				6B175128292CAD83005B65F4 /* Model */,
+				6B175127292CAD68005B65F4 /* Modify */,
+				6B175126292CAD4E005B65F4 /* Account */,
+				6B175122292C9C4A005B65F4 /* Extensions.swift */,
 			);
 			path = "MVVM&Combine";
 			sourceTree = "<group>";
@@ -374,6 +404,7 @@
 				6B5BAC8F2925F4D10020B1DC /* Assign.swift in Sources */,
 				6B5BAC8D2925F4C80020B1DC /* Sink.swift in Sources */,
 				6BE085C029280AE4002BB5E9 /* PassthroughSubject.swift in Sources */,
+				6B175125292CAD4B005B65F4 /* AccountVerify.swift in Sources */,
 				6BE085BE2927C6C3002BB5E9 /* CurrentValueSubject.swift in Sources */,
 				6B5BAC882925EF4E0020B1DC /* Practice.swift in Sources */,
 				6BAC41F02924CD9D00A58F0E /* PlayViewController.swift in Sources */,
@@ -381,7 +412,8 @@
 				6BAC42272924D32D00A58F0E /* AccountViewController.swift in Sources */,
 				6BEEDC1B29290F5900E3F4FD /* ObservableObject.swift in Sources */,
 				6BAC42232924D24A00A58F0E /* TabBarController.swift in Sources */,
-				6BAC421F2924D03B00A58F0E /* AccountViewModel.swift in Sources */,
+				6B175123292C9C4A005B65F4 /* Extensions.swift in Sources */,
+				6BAC421F2924D03B00A58F0E /* AccountInformation.swift in Sources */,
 				6B3809F6292AE77100C2A4D1 /* Publish.swift in Sources */,
 				6B1607E2292C491A00264477 /* ModifyViewController.swift in Sources */,
 				6BAC41EE2924CD9D00A58F0E /* SceneDelegate.swift in Sources */,

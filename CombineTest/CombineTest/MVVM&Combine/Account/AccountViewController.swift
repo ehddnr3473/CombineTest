@@ -7,9 +7,13 @@
 
 import UIKit
 import SnapKit
+import Combine
 
-final class AccountViewController: UIViewController {
+class AccountViewController: UIViewController {
 
+    // MARK: - Properties
+    private var account = AccountInformation()
+    
     private var titleLabel: UILabel = {
         let label = UILabel()
         
@@ -55,6 +59,8 @@ final class AccountViewController: UIViewController {
         
         label.textAlignment = .left
         label.font = .boldSystemFont(ofSize: 15)
+        
+        label.setContentHuggingPriority(.init(100), for: .horizontal)
         
         return label
     }()
@@ -131,6 +137,15 @@ final class AccountViewController: UIViewController {
         super.viewDidLoad()
         
         setUpUI()
+        configure()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        idLabel.text = account.id
+        passwordLabel.text = account.password
+        nameLabel.text = account.name
     }
     
     private func setUpUI() {
@@ -180,8 +195,16 @@ final class AccountViewController: UIViewController {
         }
     }
     
+    private func configure() {
+        idLabel.text = account.id
+        passwordLabel.text = account.password
+        nameLabel.text = account.name
+    }
+    
     @IBAction func touchUpModifyButton(_ sender: UIButton) {
         let modifyViewController = ModifyViewController()
+        
+        modifyViewController.account = account
         navigationController?.pushViewController(modifyViewController, animated: true)
     }
 }

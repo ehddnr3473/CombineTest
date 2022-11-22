@@ -7,9 +7,16 @@
 
 import UIKit
 import SnapKit
+import Combine
 
-class ModifyViewController: UIViewController {
+final class ModifyViewController: UIViewController {
 
+    // MARK: - Properties
+    var account: AccountInformation?
+    private var accountVerify = AccountVerify()
+    
+    private var subscriptions = [AnyCancellable]()
+    
     private var titleLabel: UILabel = {
         let label = UILabel()
         
@@ -50,7 +57,7 @@ class ModifyViewController: UIViewController {
         return label
     }()
     
-    private var idTextField: UITextField = {
+    var idTextField: UITextField = {
         let textField = UITextField()
         
         textField.font = .boldSystemFont(ofSize: 25)
@@ -87,7 +94,7 @@ class ModifyViewController: UIViewController {
         return label
     }()
     
-    private var passwordTextField: UITextField = {
+    var passwordTextField: UITextField = {
         let textField = UITextField()
         
         textField.font = .boldSystemFont(ofSize: 25)
@@ -158,7 +165,7 @@ class ModifyViewController: UIViewController {
         return label
     }()
     
-    private var nameTextField: UITextField = {
+    var nameTextField: UITextField = {
         let textField = UITextField()
         
         textField.font = .boldSystemFont(ofSize: 25)
@@ -187,6 +194,7 @@ class ModifyViewController: UIViewController {
         super.viewDidLoad()
         
         setUpUI()
+        configure()
     }
     
     private func setUpUI() {
@@ -235,8 +243,25 @@ class ModifyViewController: UIViewController {
         }
     }
     
-    @IBAction func touchUpSubmitButton(_ sender: UIButton) {
+    private func configure() {
+        idTextField.text = account?.id
+        passwordTextField.text = account?.password
+        nameTextField.text = account?.name
         
+        passwordTextField.textPublisher
+            .receive(on: RunLoop.main)
+            .assign(to: \.password, on: accountVerify)
+            .store(in: &subscriptions)
+        
+        passwordConfirmTextField.textPublisher
+            .receive(on: RunLoop.main)
+            .assign(to: \.passwordConfirm, on: accountVerify)
+            .store(in: &subscriptions)
+    }
+    
+    @IBAction func touchUpSubmitButton(_ sender: UIButton) {
+        account?.modify(id: idTextField.text ?? "", password: passwordTextField.text ?? "", name: nameTextField.text ?? "")
+        navigationController?.popViewController(animated: true)
     }
 }
 

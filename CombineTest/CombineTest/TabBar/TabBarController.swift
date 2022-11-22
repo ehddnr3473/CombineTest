@@ -17,6 +17,8 @@ class TabBarController: UITabBarController {
     
     private func setUp() {
         let playViewController = PlayViewController()
+        
+        let account = AccountInformation()
         let accountViewController = AccountViewController()
         let accountNavigationContoller = UINavigationController(rootViewController: accountViewController)
         
