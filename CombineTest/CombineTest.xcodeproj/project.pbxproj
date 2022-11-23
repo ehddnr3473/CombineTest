@@ -11,6 +11,8 @@
 		6B175123292C9C4A005B65F4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B175122292C9C4A005B65F4 /* Extensions.swift */; };
 		6B175125292CAD4B005B65F4 /* ModifyVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B175124292CAD4B005B65F4 /* ModifyVerification.swift */; };
 		6B3809F6292AE77100C2A4D1 /* Publish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3809F5292AE77100C2A4D1 /* Publish.swift */; };
+		6B3E0038292DAC9700779994 /* DebounceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E0037292DAC9700779994 /* DebounceViewController.swift */; };
+		6B3E003F292E204200779994 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B3E003E292E204200779994 /* SnapKit */; };
 		6B5BAC882925EF4E0020B1DC /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5BAC872925EF4E0020B1DC /* Practice.swift */; };
 		6B5BAC8D2925F4C80020B1DC /* Sink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5BAC8C2925F4C70020B1DC /* Sink.swift */; };
 		6B5BAC8F2925F4D10020B1DC /* Assign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5BAC8E2925F4D10020B1DC /* Assign.swift */; };
@@ -22,7 +24,6 @@
 		6BAC42032924CD9E00A58F0E /* CombineTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC42022924CD9E00A58F0E /* CombineTestTests.swift */; };
 		6BAC420D2924CD9F00A58F0E /* CombineTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC420C2924CD9F00A58F0E /* CombineTestUITests.swift */; };
 		6BAC420F2924CD9F00A58F0E /* CombineTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC420E2924CD9F00A58F0E /* CombineTestUITestsLaunchTests.swift */; };
-		6BAC421D2924CF4E00A58F0E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6BAC421C2924CF4E00A58F0E /* SnapKit */; };
 		6BAC421F2924D03B00A58F0E /* AccountInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC421E2924D03B00A58F0E /* AccountInformation.swift */; };
 		6BAC42212924D04500A58F0E /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC42202924D04500A58F0E /* Account.swift */; };
 		6BAC42232924D24A00A58F0E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC42222924D24A00A58F0E /* TabBarController.swift */; };
@@ -54,6 +55,7 @@
 		6B175122292C9C4A005B65F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6B175124292CAD4B005B65F4 /* ModifyVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyVerification.swift; sourceTree = "<group>"; };
 		6B3809F5292AE77100C2A4D1 /* Publish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publish.swift; sourceTree = "<group>"; };
+		6B3E0037292DAC9700779994 /* DebounceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebounceViewController.swift; sourceTree = "<group>"; };
 		6B5BAC872925EF4E0020B1DC /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		6B5BAC8C2925F4C70020B1DC /* Sink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sink.swift; sourceTree = "<group>"; };
 		6B5BAC8E2925F4D10020B1DC /* Assign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assign.swift; sourceTree = "<group>"; };
@@ -83,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BAC421D2924CF4E00A58F0E /* SnapKit in Frameworks */,
+				6B3E003F292E204200779994 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +140,14 @@
 			path = Publish;
 			sourceTree = "<group>";
 		};
+		6B3E0039292DACFE00779994 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6B175122292C9C4A005B65F4 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		6B5BAC892925F1B40020B1DC /* Practice Code */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				6BAC42252924D27B00A58F0E /* Delegate */,
+				6B3E0039292DACFE00779994 /* Extensions */,
 				6BAC42242924D26600A58F0E /* TabBar */,
 				6BE51B6F2924F69F003E5753 /* MVVM&Combine */,
 				6BE51B6E2924F687003E5753 /* PlayGround */,
@@ -223,6 +234,7 @@
 			children = (
 				6B5BAC892925F1B40020B1DC /* Practice Code */,
 				6BAC41EF2924CD9D00A58F0E /* PlayViewController.swift */,
+				6B3E0037292DAC9700779994 /* DebounceViewController.swift */,
 			);
 			path = PlayGround;
 			sourceTree = "<group>";
@@ -233,7 +245,6 @@
 				6B175128292CAD83005B65F4 /* Model */,
 				6B175127292CAD68005B65F4 /* Modify */,
 				6B175126292CAD4E005B65F4 /* Account */,
-				6B175122292C9C4A005B65F4 /* Extensions.swift */,
 			);
 			path = "MVVM&Combine";
 			sourceTree = "<group>";
@@ -281,7 +292,7 @@
 			);
 			name = CombineTest;
 			packageProductDependencies = (
-				6BAC421C2924CF4E00A58F0E /* SnapKit */,
+				6B3E003E292E204200779994 /* SnapKit */,
 			);
 			productName = CombineTest;
 			productReference = 6BAC41E82924CD9D00A58F0E /* CombineTest.app */;
@@ -356,7 +367,7 @@
 			);
 			mainGroup = 6BAC41DF2924CD9D00A58F0E;
 			packageReferences = (
-				6BAC421B2924CF4E00A58F0E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				6B3E003D292E204200779994 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 6BAC41E92924CD9D00A58F0E /* Products */;
 			projectDirPath = "";
@@ -409,6 +420,7 @@
 				6B5BAC882925EF4E0020B1DC /* Practice.swift in Sources */,
 				6BAC41F02924CD9D00A58F0E /* PlayViewController.swift in Sources */,
 				6BAC41EC2924CD9D00A58F0E /* AppDelegate.swift in Sources */,
+				6B3E0038292DAC9700779994 /* DebounceViewController.swift in Sources */,
 				6BAC42272924D32D00A58F0E /* AccountViewController.swift in Sources */,
 				6BEEDC1B29290F5900E3F4FD /* ObservableObject.swift in Sources */,
 				6BAC42232924D24A00A58F0E /* TabBarController.swift in Sources */,
@@ -750,7 +762,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6BAC421B2924CF4E00A58F0E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		6B3E003D292E204200779994 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -761,9 +773,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6BAC421C2924CF4E00A58F0E /* SnapKit */ = {
+		6B3E003E292E204200779994 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6BAC421B2924CF4E00A58F0E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 6B3E003D292E204200779994 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

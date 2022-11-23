@@ -163,6 +163,17 @@ final class PlayViewController: UIViewController {
         return button
     }()
     
+    private lazy var debounceButton: UIButton = {
+        let button = UIButton()
+        
+        button.setTitle("Debounce Test", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .red
+        button.addTarget(self, action: #selector(touchUpDebounceButton(_:)), for: .touchUpInside)
+        
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -185,7 +196,7 @@ extension PlayViewController {
             publishStackView.addArrangedSubview($0)
         }
         
-        [justButton, assignButton, currentValueSubjectButton, passthroughSubjectButton, observableObjectButton, intArrayPublishButton, notificationButton].forEach {
+        [justButton, assignButton, currentValueSubjectButton, passthroughSubjectButton, observableObjectButton, intArrayPublishButton, notificationButton, debounceButton].forEach {
             buttonStackView.addArrangedSubview($0)
         }
         
@@ -255,6 +266,11 @@ extension PlayViewController {
     
     @IBAction func touchUpNotificationButton(_ sender: UIButton) {
         practice.publishWithNotificationCenter()
+    }
+    
+    @IBAction func touchUpDebounceButton(_ sender: UIButton) {
+        let debounceViewController = DebounceViewController()
+        navigationController?.pushViewController(debounceViewController, animated: true)
     }
 }
 

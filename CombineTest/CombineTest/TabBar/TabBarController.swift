@@ -17,15 +17,15 @@ class TabBarController: UITabBarController {
     
     private func setUp() {
         let playViewController = PlayViewController()
-        
-        let account = AccountInformation()
+        let playNavigationController = UINavigationController(rootViewController: playViewController)
+
         let accountViewController = AccountViewController()
         let accountNavigationContoller = UINavigationController(rootViewController: accountViewController)
         
-        playViewController.tabBarItem = UITabBarItem(title: NameConstants.playTitle, image: UIImage(systemName: NameConstants.playIconName), tag: NumberConstants.first)
+        playNavigationController.tabBarItem = UITabBarItem(title: NameConstants.playTitle, image: UIImage(systemName: NameConstants.playIconName), tag: NumberConstants.first)
         accountNavigationContoller.tabBarItem = UITabBarItem(title: NameConstants.viewTitle, image: UIImage(systemName: NameConstants.viewIconName), tag: NumberConstants.second)
         
-        viewControllers = [playViewController, accountNavigationContoller]
+        viewControllers = [playNavigationController, accountNavigationContoller]
         setViewControllers(viewControllers, animated: true)
 
         tabBar.tintColor = .systemRed
