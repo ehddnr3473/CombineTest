@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Account Data Model Object
 struct Account {
     var id = "ehddnr3473"
     var password = "1234"

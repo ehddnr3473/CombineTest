@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 import Combine
 
+/// 계정 정보를 보여주는 ViewController
 class AccountViewController: UIViewController {
 
     // MARK: - Properties

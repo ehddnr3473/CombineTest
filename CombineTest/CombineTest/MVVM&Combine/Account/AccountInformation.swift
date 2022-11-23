@@ -8,10 +8,9 @@
 import Foundation
 import Combine
 
+/// Account View Model Object
 final class AccountInformation {
     private var account = Account()
-    
-    var text = ""
     
     var id: String {
         account.id

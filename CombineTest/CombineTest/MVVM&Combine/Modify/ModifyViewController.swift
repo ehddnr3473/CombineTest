@@ -9,11 +9,12 @@ import UIKit
 import SnapKit
 import Combine
 
+/// 계정 정보를 수정하는 ViewController
 final class ModifyViewController: UIViewController {
 
     // MARK: - Properties
     var account: AccountInformation?
-    private var accountVerify = AccountVerify()
+    private var modifyVerification = ModifyVerification()
     
     private var subscriptions = [AnyCancellable]()
     
@@ -183,8 +184,8 @@ final class ModifyViewController: UIViewController {
     private lazy var submitButton: UIButton = {
         let button = UIButton(type: .system)
         
-        button.backgroundColor = .cyan
         button.setTitle("수정", for: .normal)
+        button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(touchUpSubmitButton(_:)), for: .touchUpInside)
         
         return button
@@ -244,21 +245,36 @@ final class ModifyViewController: UIViewController {
     }
     
     private func configure() {
-        idTextField.text = account?.id
-        passwordTextField.text = account?.password
-        nameTextField.text = account?.name
+        guard let account = account else { return }
         
+        idTextField.text = account.id
+        passwordTextField.text = account.password
+        nameTextField.text = account.name
+        
+        // View Model의 property에 값 할당.
+        // 즉시 비밀번호와, 비밀번호 확인 text를 비교하기 위함.
+        modifyVerification.password = account.password
+        
+        // textField에서 publish한 것을 View Model의 property에 할당(subscribe)
         passwordTextField.textPublisher
+            // 결과가 UI를 업데이트하는 경우, receive(on:options:) 메서드를 호출하여 메인 스레드로 콜백 전달할 수 있음.
             .receive(on: RunLoop.main)
-            .assign(to: \.password, on: accountVerify)
+            .assign(to: \.password, on: modifyVerification)
             .store(in: &subscriptions)
         
         passwordConfirmTextField.textPublisher
             .receive(on: RunLoop.main)
-            .assign(to: \.passwordConfirm, on: accountVerify)
+            .assign(to: \.passwordConfirm, on: modifyVerification)
+            .store(in: &subscriptions)
+        
+        // View Model property에서 publish한 것을 UIButton의 property에 할당(subscribe)
+        modifyVerification.isMatched
+            .receive(on: RunLoop.main)
+            .assign(to: \.isValid, on: submitButton)
             .store(in: &subscriptions)
     }
     
+    // 계정 정보를 수정하고 pop
     @IBAction func touchUpSubmitButton(_ sender: UIButton) {
         account?.modify(id: idTextField.text ?? "", password: passwordTextField.text ?? "", name: nameTextField.text ?? "")
         navigationController?.popViewController(animated: true)
