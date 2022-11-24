@@ -8,4 +8,4 @@
 |항목|링크|
 |---|---|
 |Combine Framework|[노션 링크](https://www.notion.so/Combine-Framework-4b81bf59b2ce48bb917a44515cc4d57c)|
-|Test|-|
+|XCTest Framework|[노션 링크](https://www.notion.so/XCTest-Framework-c68116b004684c21bd3c4d78a22873aa)|
