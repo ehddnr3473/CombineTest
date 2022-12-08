@@ -31,20 +31,13 @@ extension Practice {
     func publishWithNotificationCenter() {
         let myNotification = Notification.Name("Yeolmok")
         
-        var myDefaultPublisher: NotificationCenter.Publisher = NotificationCenter.default.publisher(for: myNotification)
+        let myDefaultPublisher: NotificationCenter.Publisher = NotificationCenter.default.publisher(for: myNotification)
         
         var mySubscription: AnyCancellable?
         var mySubscriptionSet = [AnyCancellable]()
         
-        mySubscription = myDefaultPublisher.sink(receiveCompletion: { completion in
-            switch completion {
-            case .finished:
-                print(completion)
-            case .failure(let error):
-                print(error)
-            }
-        }) { value in
-            print(value)
+        mySubscription = myDefaultPublisher.sink { receivedNotification in
+            print(receivedNotification)
         }
         
         // inout operator "&"
@@ -55,7 +48,6 @@ extension Practice {
         NotificationCenter.default.post(Notification(name: myNotification))
         
         mySubscription?.cancel()
-        print(mySubscriptionSet)
     }
     
     // KVO - Key Value Observing
