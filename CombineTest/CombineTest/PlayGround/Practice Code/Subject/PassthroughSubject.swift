@@ -10,18 +10,28 @@ import Combine
 
 extension Practice {
     // PassthroughSubject는 초기값을 가지지 않음.
+    
+    enum MyError: Error {
+        case failureSignal
+    }
     func playPassthroughSubject() {
-        let subject = PassthroughSubject<String, Never>()
+        let subject = PassthroughSubject<String, MyError>()
         
-        let subscriber = subject
-            .sink { value in
-                print(value)
+        let subscriber = subject.sink(receiveCompletion: { completion in
+            switch completion {
+            case .failure(MyError.failureSignal):
+                print("fail")
+            case .finished:
+                print("finished")
             }
+        }) { receivedValue in
+            print(receivedValue)
+        }
         
         subject.send("Hello")
         subject.send("Good")
         
-        
+        subject.send(completion: .failure(MyError.failureSignal))
         // completion signal을 보낸 후에, 후속 호출은 아무런 영향이 없음.
         subject.send(completion: .finished)
         subject.send("Hi")

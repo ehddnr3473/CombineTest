@@ -11,19 +11,23 @@ import Combine
 extension Practice {
     // assign()의 keyPath를 활용해서 객체의 프로퍼티에 접근하여 값 set
     func playAssign() {
-        class MyClass {
-            var didSetTexts = [String]()
-            var anInt: Int = 0 {
+        class Student {
+            var name: String
+            var grade = 1 {
                 didSet {
-                    print("\(oldValue) changed to \(anInt) ")
+                    print("\(name)은 \(oldValue)학년에서 \(grade)학년이 되었습니다.")
                 }
             }
+            init(name: String) {
+                self.name = name
+            }
         }
+        let yeolmok = Student(name: "yeolmok")
         
-        let myObject = MyClass()
-        let myRange = (1...5)
+        let gradeRange = (2...4)
         
-        let _ = myRange.publisher
-            .assign(to: \.anInt, on: myObject)
+        gradeRange.publisher
+            .assign(to: \.grade, on: yeolmok)
+            .cancel()
     }
 }
