@@ -26,6 +26,18 @@ final class CombineTestTests: XCTestCase {
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
         print("Test")
     }
+    
+    func testAdd() {
+        let math = MyMathTest()
+        
+        let result = math.add(x: 0, y: 1)
+        XCTAssertEqual(result, 1)
+        XCTAssertEqual(result, 2)
+//        XCTAssertTrue(something)
+//        XCTAssertFalse(something)
+//        XCTAssertNil(something)
+//        XCTAssertNotNil(something)
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

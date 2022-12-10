@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B055EE92944DA3C004DA8F4 /* MyMathTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B055EE82944DA3C004DA8F4 /* MyMathTest.swift */; };
 		6B1607E2292C491A00264477 /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1607E1292C491A00264477 /* ModifyViewController.swift */; };
 		6B175123292C9C4A005B65F4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B175122292C9C4A005B65F4 /* Extensions.swift */; };
 		6B175125292CAD4B005B65F4 /* ModifyVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B175124292CAD4B005B65F4 /* ModifyVerification.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B055EE82944DA3C004DA8F4 /* MyMathTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMathTest.swift; sourceTree = "<group>"; };
 		6B1607E1292C491A00264477 /* ModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyViewController.swift; sourceTree = "<group>"; };
 		6B175122292C9C4A005B65F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6B175124292CAD4B005B65F4 /* ModifyVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyVerification.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B055EE52944D9B0004DA8F4 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6B055EE82944DA3C004DA8F4 /* MyMathTest.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		6B175126292CAD4E005B65F4 /* Account */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +209,7 @@
 				6BAC42242924D26600A58F0E /* TabBar */,
 				6BE51B6F2924F69F003E5753 /* MVVM&Combine */,
 				6BE51B6E2924F687003E5753 /* PlayGround */,
+				6B055EE52944D9B0004DA8F4 /* Tests */,
 				6BAC41F42924CD9E00A58F0E /* Assets.xcassets */,
 				6BAC41F62924CD9E00A58F0E /* LaunchScreen.storyboard */,
 				6BAC41F92924CD9E00A58F0E /* Info.plist */,
@@ -441,6 +452,7 @@
 				6B3809F6292AE77100C2A4D1 /* Publish.swift in Sources */,
 				6B1607E2292C491A00264477 /* ModifyViewController.swift in Sources */,
 				6BAC41EE2924CD9D00A58F0E /* SceneDelegate.swift in Sources */,
+				6B055EE92944DA3C004DA8F4 /* MyMathTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
