@@ -21,4 +21,4 @@
 |항목|링크|
 |---|---|
 |Publisher & Subscriber|[블로그 링크](https://yeolmok.tistory.com/4)|
-|Operator|_|
+|Operator|[블로그 링크](https://yeolmok.tistory.com/5)|
