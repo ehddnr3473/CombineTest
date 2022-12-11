@@ -1,8 +1,21 @@
 # CombineTest
 
 ## 개요
- 간단한 ViewModel을 만들어서 Combine 프레임워크를 사용해 실습해보고, 유닛 테스트를 진행해보는 프로젝트입니다.
+ 간단한 ViewModel을 만들어서 Combine 프레임워크를 사용해 실습해보고, XCTest 프레임워크르 사용해 유닛 테스트와 UI 테스트를 진행해보는 저장소입니다.
  
+<br></br>
+
+## ComebineTest 프로젝트 구성
+|폴더|내용|
+|---|---|
+|Playground|Combine|
+|MVVM&Combine|_|
+|Notification|Combine & Notification|
+|Tests|XCTest를 위한 코드|
+|CombineTestTests|유닛 테스트|
+|CombineTestUITests|UI 테스트|
+
+
 <br></br>
 ## 문서 정리
 |항목|링크|
