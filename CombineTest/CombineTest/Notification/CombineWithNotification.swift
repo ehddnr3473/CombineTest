@@ -48,6 +48,7 @@ final class CombineWithNotification: UIViewController {
 //            .map { notification in
 //                (notification.object as! UITextField).text!
 //            }
+            .filter { $0.count > 5 }
             .assign(to: \.myText, on: myViewModel)
     }
 }
