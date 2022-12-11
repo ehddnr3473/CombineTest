@@ -1,5 +1,5 @@
 //
-//  TextFieldNotificationTest.swift
+//  CombineWithNotification.swift
 //  CombineTest
 //
 //  Created by 김동욱 on 2022/12/09.
@@ -9,7 +9,7 @@ import UIKit
 import Combine
 
 // NotificationCenter & Combine Operator Test
-final class TextFieldNotificationTest: UIViewController {
+final class CombineWithNotification: UIViewController {
 
     private var myTextField: UITextField = {
         let textField = UITextField()
@@ -20,28 +20,34 @@ final class TextFieldNotificationTest: UIViewController {
         
         return textField
     }()
+    
+    private let myViewModel = MyViewModel()
+    private var mySubscriber: AnyCancellable?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.addSubview(myTextField)
         
-        setUpNotification()
+        setUpNotificationWithMap()
     }
-    
-    private var subscriptions = [AnyCancellable]()
     
     override func viewDidLayoutSubviews() {
         myTextField.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
         myTextField.center = view.center
     }
     
-    private func setUpNotification() {
-        let publisher = NotificationCenter.default
+    private func setUpNotificationWithMap() {
+        let myPublisher = NotificationCenter.default
             .publisher(for: UITextField.textDidChangeNotification, object: myTextField)
+            .map { notification in
+                (notification.object as! UITextField).text!
+            }
         
-        publisher.sink { receivedNotification in
-            print(receivedNotification)
-        }
-        .store(in: &subscriptions)
+        mySubscriber = myPublisher
+//            .map { notification in
+//                (notification.object as! UITextField).text!
+//            }
+            .assign(to: \.myText, on: myViewModel)
     }
 }

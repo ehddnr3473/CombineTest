@@ -22,10 +22,13 @@ class TabBarController: UITabBarController {
         let accountViewController = AccountViewController()
         let accountNavigationContoller = UINavigationController(rootViewController: accountViewController)
         
+        let combineWithNotification = CombineWithNotification()
+        
         playNavigationController.tabBarItem = UITabBarItem(title: NameConstants.playTitle, image: UIImage(systemName: NameConstants.playIconName), tag: NumberConstants.first)
         accountNavigationContoller.tabBarItem = UITabBarItem(title: NameConstants.viewTitle, image: UIImage(systemName: NameConstants.viewIconName), tag: NumberConstants.second)
+        combineWithNotification.tabBarItem = UITabBarItem(title: NameConstants.notificationTitle, image: UIImage(systemName: NameConstants.notificationIconName), tag: NumberConstants.third)
         
-        viewControllers = [playNavigationController, accountNavigationContoller]
+        viewControllers = [playNavigationController, accountNavigationContoller, combineWithNotification]
         setViewControllers(viewControllers, animated: true)
 
         tabBar.tintColor = .systemRed
@@ -37,10 +40,15 @@ class TabBarController: UITabBarController {
 private struct NameConstants {
     static let playTitle = "Playground"
     static let viewTitle = "View"
+    static let notificationTitle = "Notification"
     static let playIconName = "gamecontroller"
     static let viewIconName = "list.bullet.clipboard"
+    static let notificationIconName = "alarm"
+    
+    
 }
 private struct NumberConstants {
     static let first = 0
     static let second = 1
+    static let third = 2
 }

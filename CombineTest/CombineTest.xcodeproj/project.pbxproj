@@ -11,13 +11,14 @@
 		6B1607E2292C491A00264477 /* ModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1607E1292C491A00264477 /* ModifyViewController.swift */; };
 		6B175123292C9C4A005B65F4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B175122292C9C4A005B65F4 /* Extensions.swift */; };
 		6B175125292CAD4B005B65F4 /* ModifyVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B175124292CAD4B005B65F4 /* ModifyVerification.swift */; };
+		6B1B12392945718000140F05 /* MyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1B12382945718000140F05 /* MyViewModel.swift */; };
 		6B3809F6292AE77100C2A4D1 /* Publish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3809F5292AE77100C2A4D1 /* Publish.swift */; };
 		6B3E0038292DAC9700779994 /* DebounceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E0037292DAC9700779994 /* DebounceViewController.swift */; };
 		6B3E003F292E204200779994 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B3E003E292E204200779994 /* SnapKit */; };
 		6B5BAC882925EF4E0020B1DC /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5BAC872925EF4E0020B1DC /* Practice.swift */; };
 		6B5BAC8D2925F4C80020B1DC /* Sink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5BAC8C2925F4C70020B1DC /* Sink.swift */; };
 		6B5BAC8F2925F4D10020B1DC /* Assign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5BAC8E2925F4D10020B1DC /* Assign.swift */; };
-		6B8DD7852942828F001D28E0 /* TextFieldNotificationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DD7842942828F001D28E0 /* TextFieldNotificationTest.swift */; };
+		6B8DD7852942828F001D28E0 /* CombineWithNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DD7842942828F001D28E0 /* CombineWithNotification.swift */; };
 		6BAC41EC2924CD9D00A58F0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC41EB2924CD9D00A58F0E /* AppDelegate.swift */; };
 		6BAC41EE2924CD9D00A58F0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC41ED2924CD9D00A58F0E /* SceneDelegate.swift */; };
 		6BAC41F02924CD9D00A58F0E /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAC41EF2924CD9D00A58F0E /* PlayViewController.swift */; };
@@ -58,12 +59,13 @@
 		6B1607E1292C491A00264477 /* ModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyViewController.swift; sourceTree = "<group>"; };
 		6B175122292C9C4A005B65F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6B175124292CAD4B005B65F4 /* ModifyVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyVerification.swift; sourceTree = "<group>"; };
+		6B1B12382945718000140F05 /* MyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewModel.swift; sourceTree = "<group>"; };
 		6B3809F5292AE77100C2A4D1 /* Publish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publish.swift; sourceTree = "<group>"; };
 		6B3E0037292DAC9700779994 /* DebounceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebounceViewController.swift; sourceTree = "<group>"; };
 		6B5BAC872925EF4E0020B1DC /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		6B5BAC8C2925F4C70020B1DC /* Sink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sink.swift; sourceTree = "<group>"; };
 		6B5BAC8E2925F4D10020B1DC /* Assign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assign.swift; sourceTree = "<group>"; };
-		6B8DD7842942828F001D28E0 /* TextFieldNotificationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldNotificationTest.swift; sourceTree = "<group>"; };
+		6B8DD7842942828F001D28E0 /* CombineWithNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineWithNotification.swift; sourceTree = "<group>"; };
 		6BAC41E82924CD9D00A58F0E /* CombineTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BAC41EB2924CD9D00A58F0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BAC41ED2924CD9D00A58F0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				6B5BAC872925EF4E0020B1DC /* Practice.swift */,
-				6B8DD78329428121001D28E0 /* NotificationCenter */,
 				6B3809F4292AE6C700C2A4D1 /* Publish */,
 				6BEEDC1929290F3600E3F4FD /* Observable Objects */,
 				6BEEDC1829290F0400E3F4FD /* Subscriber */,
@@ -175,12 +176,13 @@
 			path = "Practice Code";
 			sourceTree = "<group>";
 		};
-		6B8DD78329428121001D28E0 /* NotificationCenter */ = {
+		6B8DD78329428121001D28E0 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				6B8DD7842942828F001D28E0 /* TextFieldNotificationTest.swift */,
+				6B8DD7842942828F001D28E0 /* CombineWithNotification.swift */,
+				6B1B12382945718000140F05 /* MyViewModel.swift */,
 			);
-			path = NotificationCenter;
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		6BAC41DF2924CD9D00A58F0E = {
@@ -211,6 +213,7 @@
 				6BAC42242924D26600A58F0E /* TabBar */,
 				6BE51B6F2924F69F003E5753 /* MVVM&Combine */,
 				6BE51B6E2924F687003E5753 /* PlayGround */,
+				6B8DD78329428121001D28E0 /* Notification */,
 				6B055EE52944D9B0004DA8F4 /* Tests */,
 				6BAC41F42924CD9E00A58F0E /* Assets.xcassets */,
 				6BAC41F62924CD9E00A58F0E /* LaunchScreen.storyboard */,
@@ -441,8 +444,9 @@
 				6B5BAC8D2925F4C80020B1DC /* Sink.swift in Sources */,
 				6BE085C029280AE4002BB5E9 /* PassthroughSubject.swift in Sources */,
 				6B175125292CAD4B005B65F4 /* ModifyVerification.swift in Sources */,
+				6B1B12392945718000140F05 /* MyViewModel.swift in Sources */,
 				6BE085BE2927C6C3002BB5E9 /* CurrentValueSubject.swift in Sources */,
-				6B8DD7852942828F001D28E0 /* TextFieldNotificationTest.swift in Sources */,
+				6B8DD7852942828F001D28E0 /* CombineWithNotification.swift in Sources */,
 				6B5BAC882925EF4E0020B1DC /* Practice.swift in Sources */,
 				6BAC41F02924CD9D00A58F0E /* PlayViewController.swift in Sources */,
 				6BAC41EC2924CD9D00A58F0E /* AppDelegate.swift in Sources */,
