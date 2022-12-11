@@ -24,11 +24,14 @@ class TabBarController: UITabBarController {
         
         let combineWithNotification = CombineWithNotification()
         
+        let myTestViewController = MyTestViewController()
+        
         playNavigationController.tabBarItem = UITabBarItem(title: NameConstants.playTitle, image: UIImage(systemName: NameConstants.playIconName), tag: NumberConstants.first)
         accountNavigationContoller.tabBarItem = UITabBarItem(title: NameConstants.viewTitle, image: UIImage(systemName: NameConstants.viewIconName), tag: NumberConstants.second)
         combineWithNotification.tabBarItem = UITabBarItem(title: NameConstants.notificationTitle, image: UIImage(systemName: NameConstants.notificationIconName), tag: NumberConstants.third)
+        myTestViewController.tabBarItem = UITabBarItem(title: NameConstants.test, image: UIImage(systemName: NameConstants.testIconName), tag: NumberConstants.fourth)
         
-        viewControllers = [playNavigationController, accountNavigationContoller, combineWithNotification]
+        viewControllers = [playNavigationController, accountNavigationContoller, combineWithNotification, myTestViewController]
         setViewControllers(viewControllers, animated: true)
 
         tabBar.tintColor = .systemRed
@@ -37,18 +40,21 @@ class TabBarController: UITabBarController {
     }
 }
 
-private struct NameConstants {
+private enum NameConstants {
     static let playTitle = "Playground"
     static let viewTitle = "View"
     static let notificationTitle = "Notification"
+    static let test = "Test"
     static let playIconName = "gamecontroller"
     static let viewIconName = "list.bullet.clipboard"
     static let notificationIconName = "alarm"
+    static let testIconName = "testtube.2"
     
     
 }
-private struct NumberConstants {
+private enum NumberConstants {
     static let first = 0
     static let second = 1
     static let third = 2
+    static let fourth = 3
 }

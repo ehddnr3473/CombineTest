@@ -12,6 +12,7 @@
 		6B175123292C9C4A005B65F4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B175122292C9C4A005B65F4 /* Extensions.swift */; };
 		6B175125292CAD4B005B65F4 /* ModifyVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B175124292CAD4B005B65F4 /* ModifyVerification.swift */; };
 		6B1B12392945718000140F05 /* MyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1B12382945718000140F05 /* MyViewModel.swift */; };
+		6B1B12482945E73700140F05 /* MyTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1B12472945E73700140F05 /* MyTestViewController.swift */; };
 		6B3809F6292AE77100C2A4D1 /* Publish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3809F5292AE77100C2A4D1 /* Publish.swift */; };
 		6B3E0038292DAC9700779994 /* DebounceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E0037292DAC9700779994 /* DebounceViewController.swift */; };
 		6B3E003F292E204200779994 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6B3E003E292E204200779994 /* SnapKit */; };
@@ -60,6 +61,7 @@
 		6B175122292C9C4A005B65F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6B175124292CAD4B005B65F4 /* ModifyVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyVerification.swift; sourceTree = "<group>"; };
 		6B1B12382945718000140F05 /* MyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewModel.swift; sourceTree = "<group>"; };
+		6B1B12472945E73700140F05 /* MyTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTestViewController.swift; sourceTree = "<group>"; };
 		6B3809F5292AE77100C2A4D1 /* Publish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publish.swift; sourceTree = "<group>"; };
 		6B3E0037292DAC9700779994 /* DebounceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebounceViewController.swift; sourceTree = "<group>"; };
 		6B5BAC872925EF4E0020B1DC /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				6B055EE82944DA3C004DA8F4 /* MyMath.swift */,
+				6B1B12472945E73700140F05 /* MyTestViewController.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				6BEEDC1B29290F5900E3F4FD /* ObservableObject.swift in Sources */,
 				6BAC42232924D24A00A58F0E /* TabBarController.swift in Sources */,
 				6B175123292C9C4A005B65F4 /* Extensions.swift in Sources */,
+				6B1B12482945E73700140F05 /* MyTestViewController.swift in Sources */,
 				6BAC421F2924D03B00A58F0E /* AccountInformation.swift in Sources */,
 				6B3809F6292AE77100C2A4D1 /* Publish.swift in Sources */,
 				6B1607E2292C491A00264477 /* ModifyViewController.swift in Sources */,
