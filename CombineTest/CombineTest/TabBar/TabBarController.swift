@@ -24,7 +24,7 @@ class TabBarController: UITabBarController {
         
         let combineWithNotification = CombineWithNotification()
         
-        let myTestViewController = MyTestViewController()
+        let myTestViewController = MyAccountViewController()
         
         playNavigationController.tabBarItem = UITabBarItem(title: NameConstants.playTitle, image: UIImage(systemName: NameConstants.playIconName), tag: NumberConstants.first)
         accountNavigationContoller.tabBarItem = UITabBarItem(title: NameConstants.viewTitle, image: UIImage(systemName: NameConstants.viewIconName), tag: NumberConstants.second)

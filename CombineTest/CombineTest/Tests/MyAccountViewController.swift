@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MyTestViewController: UIViewController {
+final class MyAccountViewController: UIViewController {
 
     private let label: UILabel = {
         let label = UILabel()
