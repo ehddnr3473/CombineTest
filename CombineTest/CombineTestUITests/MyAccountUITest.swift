@@ -34,6 +34,10 @@ final class MyAccountUITest: XCTestCase {
         
         tabBarButton.tap()
         
+//        let title = app.staticTexts["Log In"]
+        let title = app.staticTexts["Login"]
+        XCTAssertTrue(title.exists, "Log in label not found")
+        
         let usernameField = app.textFields["Username"]
         XCTAssertTrue(usernameField.exists)
         
