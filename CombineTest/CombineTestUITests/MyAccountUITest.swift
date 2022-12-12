@@ -34,8 +34,9 @@ final class MyAccountUITest: XCTestCase {
         
         tabBarButton.tap()
         
-//        let title = app.staticTexts["Log In"]
-        let title = app.staticTexts["Login"]
+        let title = app.staticTexts["Log In"]
+        // 특정 identifier가 없고, staticTexts에 정확한 문자열이 입력되지 않은 경우, 실패
+//        let title = app.staticTexts["Login"]
         XCTAssertTrue(title.exists, "Log in label not found")
         
         let usernameField = app.textFields["Username"]

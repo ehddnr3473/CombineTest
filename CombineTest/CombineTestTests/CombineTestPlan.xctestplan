@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "5EB2AF60-F7D5-48F4-9FD3-7717388DEAFE",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:CombineTest.xcodeproj",
+        "identifier" : "6BAC41FD2924CD9E00A58F0E",
+        "name" : "CombineTestTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:CombineTest.xcodeproj",
+        "identifier" : "6BAC42072924CD9F00A58F0E",
+        "name" : "CombineTestUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -89,6 +89,7 @@
 		6BE085BD2927C6C3002BB5E9 /* CurrentValueSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentValueSubject.swift; sourceTree = "<group>"; };
 		6BE085BF29280AE4002BB5E9 /* PassthroughSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassthroughSubject.swift; sourceTree = "<group>"; };
 		6BE285FE2944DFFA00B5EA49 /* MyMathTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMathTest.swift; sourceTree = "<group>"; };
+		6BE8213E29472A6700B6BB8C /* CombineTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CombineTestPlan.xctestplan; sourceTree = "<group>"; };
 		6BEEDC1A29290F5900E3F4FD /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -230,6 +231,7 @@
 		6BAC42012924CD9E00A58F0E /* CombineTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				6BE8213E29472A6700B6BB8C /* CombineTestPlan.xctestplan */,
 				6BAC42022924CD9E00A58F0E /* CombineTestTests.swift */,
 				6BE285FE2944DFFA00B5EA49 /* MyMathTest.swift */,
 			);

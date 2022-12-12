@@ -30,7 +30,7 @@ final class MyMathTest: XCTestCase {
     
     func testAdd() {
         let result = math.add(0, 1)
-        XCTAssertEqual(result, 2, "failed")
+        XCTAssertEqual(result, 1, "failed, \(result)")
     }
     
     func testSub() {
@@ -40,7 +40,7 @@ final class MyMathTest: XCTestCase {
     
     func testMultiply() {
         let result = math.multiply(18, 5)
-        XCTAssertTrue(result > 500)
+        XCTAssertTrue(result < 500)
         
     }
     
