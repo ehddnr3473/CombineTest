@@ -20,14 +20,14 @@
 ## 문서 정리
 |항목|링크|
 |---|---|
-|Combine Framework|[노션 링크](https://www.notion.so/Combine-Framework-4b81bf59b2ce48bb917a44515cc4d57c)|
-|XCTest Framework|[노션 링크](https://www.notion.so/XCTest-Framework-c68116b004684c21bd3c4d78a22873aa)|
+|Combine Framework|[노션 링크](https://delirious-podium-f4f.notion.site/Combine-Framework-4b81bf59b2ce48bb917a44515cc4d57c)|
+|XCTest Framework|[노션 링크](https://delirious-podium-f4f.notion.site/XCTest-Framework-c68116b004684c21bd3c4d78a22873aa)|
 
 <br></br>
 ## WWDC 정리
 |항목|링크|
 |---|---|
-|Combine in Practice(2019)|[노션 링크](https://www.notion.so/Combine-in-Practice-ba5b39dc012642fcbf03bf5b654716ce)|
+|Combine in Practice(2019)|[노션 링크](https://delirious-podium-f4f.notion.site/Combine-in-Practice-ba5b39dc012642fcbf03bf5b654716ce)|
 |Testing in Xcode(2019)|[노션 링크](https://delirious-podium-f4f.notion.site/Testing-in-Xcode-8540d63d22124622b5b6886a5923cd14)|
 
 <br></br>
