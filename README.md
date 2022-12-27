@@ -1,7 +1,7 @@
 # CombineTest
 
 ## 개요
- 간단한 ViewModel을 만들어서 Combine 프레임워크를 사용해 실습해보고, XCTest 프레임워크르 사용해 유닛 테스트와 UI 테스트를 진행해보는 저장소입니다.
+ 간단한 ViewModel을 만들어서 Combine 프레임워크를 사용해 실습해보고, XCTest 프레임워크를 사용해 유닛 테스트와 UI 테스트를 진행해보는 저장소입니다.
  
 <br></br>
 
